@@ -1,0 +1,40 @@
+[gd_resource type="Theme" format=3 uid="uid://dabht8tgb7tnp"]
+
+[ext_resource type="FontFile" uid="uid://dseoel17abjv7" path="res://MinecraftRegular-Bmg3.otf" id="1_r6bx6"]
+[ext_resource type="StyleBox" uid="uid://bhfaijhv8boro" path="res://stone_hover.tres" id="2_jv4mc"]
+[ext_resource type="StyleBox" uid="uid://d2hp8cb8p1bym" path="res://stone_pressed.tres" id="3_240qs"]
+[ext_resource type="StyleBox" uid="uid://6xkdmbvh81ny" path="res://trans_but.tres" id="4_kh4ov"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tl3la"]
+bg_color = Color(0.14333999, 0.14334002, 0.14333996, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.06469657, 0.06469653, 0.06469646, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddhh8"]
+bg_color = Color(0.4890775, 0.4769119, 0.47671044, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14044756, 0.14044741, 0.1404475, 1)
+
+[resource]
+Button/colors/font_color = Color(0.9717755, 0.97177535, 0.97177535, 1)
+Button/colors/font_hover_color = Color(1, 0.972549, 0.44313726, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.972549, 0.44313726, 1)
+Button/colors/font_pressed_color = Color(1, 0.972549, 0.67058825, 1)
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 21
+Button/fonts/font = ExtResource("1_r6bx6")
+Button/styles/disabled = SubResource("StyleBoxFlat_tl3la")
+Button/styles/hover = ExtResource("2_jv4mc")
+Button/styles/normal = SubResource("StyleBoxFlat_ddhh8")
+Button/styles/pressed = ExtResource("3_240qs")
+Label/fonts/font = ExtResource("1_r6bx6")
+TextEdit/font_sizes/font_size = 21
+TextEdit/fonts/font = ExtResource("1_r6bx6")
+TextEdit/styles/focus = ExtResource("4_kh4ov")
+TextEdit/styles/normal = ExtResource("4_kh4ov")

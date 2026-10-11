@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://dnrnguxcpp0lo"]
+
+[ext_resource type="Script" uid="uid://cmqdkmuchevhh" path="res://sing_world_creator.gd" id="1_bskmd"]
+[ext_resource type="Texture2D" uid="uid://bubtsmv2yu3jx" path="res://dirt2.webp" id="2_fj42n"]
+[ext_resource type="Theme" uid="uid://dabht8tgb7tnp" path="res://stone_theme.tres" id="3_e0vbf"]
+
+[node name="World creator" type="Node2D" unique_id=496732347]
+position = Vector2(555, 310)
+script = ExtResource("1_bskmd")
+
+[node name="Dirt2" type="Sprite2D" parent="." unique_id=293360202]
+modulate = Color(0.5370987, 0.5370987, 0.5370987, 1)
+texture_repeat = 2
+position = Vector2(17, 17.000004)
+scale = Vector2(0.08052083, 0.08432294)
+texture = ExtResource("2_fj42n")
+region_enabled = true
+region_rect = Rect2(0, 0, 15000, 8000)
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=398899900]
+offset_left = -292.0
+offset_top = 268.0
+offset_right = 296.0
+offset_bottom = 314.0
+size_flags_vertical = 3
+theme_override_constants/separation = 27
+
+[node name="CreateButton" type="Button" parent="HBoxContainer" unique_id=715570794]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "Create New World"
+
+[node name="CancelButton" type="Button" parent="HBoxContainer" unique_id=2121858180]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "Cancel"
+
+[node name="MainPanel" type="Panel" parent="." unique_id=651429217]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorldOptions" type="Button" parent="MainPanel" unique_id=459602704]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -189.0
+offset_top = 154.0
+offset_right = 192.0
+offset_bottom = 201.0
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "More World Options..."
+
+[node name="ModeSelect" type="Button" parent="MainPanel" unique_id=1783912080]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -189.0
+offset_top = -8.0
+offset_right = 192.0
+offset_bottom = 39.0
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "Mode: Survival"
+metadata/_edit_use_anchors_ = true
+
+[node name="ModeDescription" type="Label" parent="MainPanel/ModeSelect" unique_id=346657459]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -36.0
+offset_top = 48.0
+offset_right = 444.0
+offset_bottom = 104.0
+theme = ExtResource("3_e0vbf")
+theme_override_colors/font_color = Color(0.6156863, 0.6156863, 0.6156863, 1)
+theme_override_font_sizes/font_size = 23
+text = "Do fun stuff related to this mode and see lots of cool things"
+autowrap_mode = 3
+
+[node name="WorldNameEnterer" type="TextEdit" parent="MainPanel" unique_id=1967329417]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -237.0
+offset_top = -168.0
+offset_right = 248.0
+offset_bottom = -115.0
+theme = ExtResource("3_e0vbf")
+
+[node name="SavePlace" type="Label" parent="MainPanel/WorldNameEnterer" unique_id=1187458058]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 59.0
+offset_right = 405.0
+offset_bottom = 85.0
+theme = ExtResource("3_e0vbf")
+theme_override_colors/font_color = Color(0.6156863, 0.6156863, 0.6156863, 1)
+theme_override_font_sizes/font_size = 23
+text = "Will be saved in: -"
+autowrap_mode = 3
+
+[node name="Name" type="Label" parent="MainPanel/WorldNameEnterer" unique_id=1666219824]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 405.0
+offset_bottom = -2.0
+theme = ExtResource("3_e0vbf")
+theme_override_colors/font_color = Color(0.6156863, 0.6156863, 0.6156863, 1)
+theme_override_font_sizes/font_size = 23
+text = "World Name"
+autowrap_mode = 3
+
+[node name="Header" type="Label" parent="MainPanel" unique_id=1068840088]
+layout_mode = 0
+offset_left = -86.0
+offset_top = -259.0
+offset_right = 87.0
+offset_bottom = -208.0
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 23
+text = "Create World
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MorePanel" type="Panel" parent="." unique_id=154389772]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DoneButton" type="Button" parent="MorePanel" unique_id=370613422]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -189.0
+offset_top = 154.0
+offset_right = 192.0
+offset_bottom = 201.0
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "Done"
+
+[node name="SeedEnterer" type="TextEdit" parent="MorePanel" unique_id=1454148670]
+layout_mode = 0
+offset_left = -237.0
+offset_top = -168.0
+offset_right = 248.0
+offset_bottom = -115.0
+theme = ExtResource("3_e0vbf")
+
+[node name="SeedLabel" type="Label" parent="MorePanel/SeedEnterer" unique_id=1359583499]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 405.0
+offset_bottom = -2.0
+theme = ExtResource("3_e0vbf")
+theme_override_colors/font_color = Color(0.6156863, 0.6156863, 0.6156863, 1)
+theme_override_font_sizes/font_size = 23
+text = "Seed for the World Generator"
+autowrap_mode = 3
+
+[node name="SeedLabel2" type="Label" parent="MorePanel/SeedEnterer" unique_id=1734105923]
+layout_mode = 0
+offset_top = 56.0
+offset_right = 405.0
+offset_bottom = 82.0
+theme = ExtResource("3_e0vbf")
+theme_override_colors/font_color = Color(0.6156863, 0.6156863, 0.6156863, 1)
+theme_override_font_sizes/font_size = 23
+text = "Leave blank for a random seed"
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MorePanel" unique_id=342914617]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -370.0
+offset_top = -48.0
+offset_right = -23.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 61
+
+[node name="RenameButton" type="Button" parent="MorePanel/VBoxContainer" unique_id=1386386505]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "Generate Structures: ON"
+
+[node name="CancelRenameButton" type="Button" parent="MorePanel/VBoxContainer" unique_id=2125485130]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "Allow Cheats: OFF"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MorePanel" unique_id=1781326437]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = -48.0
+offset_right = 374.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 61
+
+[node name="RenameButton" type="Button" parent="MorePanel/VBoxContainer2" unique_id=267759793]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "World Type: Default"
+
+[node name="CancelRenameButton" type="Button" parent="MorePanel/VBoxContainer2" unique_id=1798222043]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_e0vbf")
+theme_override_font_sizes/font_size = 21
+text = "Bonus Chest: OFF"
+
+[connection signal="pressed" from="HBoxContainer/CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="MainPanel/WorldOptions" to="." method="_on_world_options_pressed"]
+[connection signal="pressed" from="MainPanel/ModeSelect" to="." method="_on_mode_select_pressed"]
+[connection signal="text_changed" from="MainPanel/WorldNameEnterer" to="." method="_on_world_name_enterer_text_changed"]
+[connection signal="pressed" from="MorePanel/DoneButton" to="." method="_on_done_button_pressed"]

@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://b1a6lmuimv18"]
+
+[ext_resource type="Script" uid="uid://cl7s2ffvvm2ao" path="res://menus.gd" id="1_2hpl7"]
+[ext_resource type="Theme" uid="uid://dabht8tgb7tnp" path="res://stone_theme.tres" id="1_ksksx"]
+[ext_resource type="Texture2D" uid="uid://bubtsmv2yu3jx" path="res://dirt2.webp" id="1_w73sm"]
+[ext_resource type="FontFile" uid="uid://cae78mlaylt71" path="res://Minecrafter.Reg.ttf" id="2_w73sm"]
+
+[node name="Menus" type="Node2D" unique_id=496732347]
+position = Vector2(555, 310)
+script = ExtResource("1_2hpl7")
+
+[node name="Dirt2" type="Sprite2D" parent="." unique_id=293360202]
+modulate = Color(0.5370987, 0.5370987, 0.5370987, 1)
+texture_repeat = 2
+position = Vector2(17, 17.000004)
+scale = Vector2(0.08052083, 0.08432294)
+texture = ExtResource("1_w73sm")
+region_enabled = true
+region_rect = Rect2(0, 0, 15000, 8000)
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1865959894]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -30.0
+offset_right = 259.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="SingleplayerButton" type="Button" parent="VBoxContainer" unique_id=952235999]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_ksksx")
+theme_override_font_sizes/font_size = 21
+text = "Singleplayer"
+
+[node name="MultiplayerButton" type="Button" parent="VBoxContainer" unique_id=459602704]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_ksksx")
+theme_override_font_sizes/font_size = 21
+text = "Multiplayer"
+
+[node name="TexPackButton" type="Button" parent="VBoxContainer" unique_id=1366496323]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_ksksx")
+theme_override_font_sizes/font_size = 21
+text = "Texture Packs"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=398899900]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 11
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=715570794]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_ksksx")
+theme_override_font_sizes/font_size = 21
+text = "Options"
+
+[node name="ProfileButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2121858180]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_ksksx")
+theme_override_font_sizes/font_size = 21
+text = "Edit Profile"
+
+[node name="TitleLabel" type="Label" parent="." unique_id=256801422]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = -257.0
+offset_right = 305.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 13)
+theme_override_colors/font_color = Color(0.6416527, 0.6082868, 0.59387636, 1)
+theme_override_colors/font_shadow_color = Color(0.12, 0.12, 0.12, 1)
+theme_override_constants/shadow_offset_y = 14
+theme_override_fonts/font = ExtResource("2_w73sm")
+theme_override_font_sizes/font_size = 100
+text = "Jeffcraft"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="TitleLabel" unique_id=332783209]
+layout_mode = 0
+offset_left = 467.99997
+offset_top = 114.000015
+offset_right = 674.0
+offset_bottom = 149.48463
+rotation = -0.45669383
+theme = ExtResource("1_ksksx")
+theme_override_colors/font_color = Color(0.99215686, 0.8784314, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.17402247, 0.1577265, 0.002882886, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_font_sizes/font_size = 24
+text = "Cool and original!"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/SingleplayerButton" to="." method="_on_singleplayer_button_pressed"]

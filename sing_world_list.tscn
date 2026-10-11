@@ -1,0 +1,318 @@
+[gd_scene format=3 uid="uid://c4abu26rwqf53"]
+
+[ext_resource type="Script" uid="uid://3lg6sfslcea6" path="res://sing_world_list.gd" id="1_xm5et"]
+[ext_resource type="Texture2D" uid="uid://bubtsmv2yu3jx" path="res://dirt2.webp" id="2_vkk2q"]
+[ext_resource type="Theme" uid="uid://dabht8tgb7tnp" path="res://stone_theme.tres" id="3_rp5wo"]
+[ext_resource type="StyleBox" uid="uid://6xkdmbvh81ny" path="res://trans_but.tres" id="4_2lvgt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3ms0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_7l1ui"]
+Button/styles/hover = ExtResource("4_2lvgt")
+Button/styles/normal = SubResource("StyleBoxFlat_f3ms0")
+Button/styles/pressed = ExtResource("4_2lvgt")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljyea"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l1ui"]
+bg_color = Color(0.004019165, 0.004019165, 0.004019165, 0.4)
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Singleplayer" type="Node2D" unique_id=496732347]
+position = Vector2(555, 310)
+script = ExtResource("1_xm5et")
+
+[node name="Dirt2" type="Sprite2D" parent="." unique_id=293360202]
+modulate = Color(0.5370987, 0.5370987, 0.5370987, 1)
+texture_repeat = 2
+position = Vector2(17, 17.000004)
+scale = Vector2(0.08052083, 0.08432294)
+texture = ExtResource("2_vkk2q")
+region_enabled = true
+region_rect = Rect2(0, 0, 15000, 8000)
+metadata/_edit_lock_ = true
+
+[node name="WorldButtonTemplate" type="Button" parent="." unique_id=1226074543]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 90)
+offset_left = -236.0
+offset_top = -203.0
+offset_right = 273.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7l1ui")
+toggle_mode = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WorldButtonTemplate" unique_id=547066602]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_right = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="Name" type="Label" parent="WorldButtonTemplate/VBoxContainer" unique_id=745736549]
+layout_mode = 2
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 23
+text = "New World"
+vertical_alignment = 1
+
+[node name="Date" type="Label" parent="WorldButtonTemplate/VBoxContainer" unique_id=1377513641]
+layout_mode = 2
+theme = ExtResource("3_rp5wo")
+theme_override_colors/font_color = Color(0.6158285, 0.6158285, 0.6158284, 1)
+theme_override_font_sizes/font_size = 23
+text = "New World (3/3/01 4:20 AM)"
+vertical_alignment = 1
+
+[node name="Mode" type="Label" parent="WorldButtonTemplate/VBoxContainer" unique_id=2108942974]
+layout_mode = 2
+theme = ExtResource("3_rp5wo")
+theme_override_colors/font_color = Color(0.6156863, 0.6156863, 0.6156863, 1)
+theme_override_font_sizes/font_size = 23
+text = "World Mode"
+vertical_alignment = 1
+
+[node name="MainPanel" type="Panel" parent="." unique_id=369018992]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -218.0
+offset_right = 269.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ljyea")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel" unique_id=1865959894]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -356.5
+offset_top = 180.5
+offset_right = -9.5
+offset_bottom = 271.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="PlayWorldButton" type="Button" parent="MainPanel/VBoxContainer" unique_id=1366496323]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Play Selected World
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/VBoxContainer" unique_id=398899900]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 11
+
+[node name="RenameWorldButton" type="Button" parent="MainPanel/VBoxContainer/HBoxContainer" unique_id=715570794]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Rename"
+
+[node name="DeleteWorldButton" type="Button" parent="MainPanel/VBoxContainer/HBoxContainer" unique_id=2121858180]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Delete"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainPanel" unique_id=955151887]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.5
+offset_top = 180.5
+offset_right = 336.5
+offset_bottom = 271.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="Create New World" type="Button" parent="MainPanel/VBoxContainer2" unique_id=1287215139]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Create New World"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/VBoxContainer2" unique_id=1171184955]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 11
+
+[node name="Re-Create" type="Button" parent="MainPanel/VBoxContainer2/HBoxContainer" unique_id=613864057]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Re-Create"
+
+[node name="Cancel" type="Button" parent="MainPanel/VBoxContainer2/HBoxContainer" unique_id=913294442]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Cancel"
+
+[node name="Backdrop" type="Panel" parent="MainPanel" unique_id=121253788]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -592.5
+offset_top = -240.5
+offset_right = 615.5
+offset_bottom = 139.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7l1ui")
+
+[node name="WorldScroller" type="ScrollContainer" parent="MainPanel/Backdrop" unique_id=1180376229]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = -186.0
+offset_right = 256.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WorldList" type="VBoxContainer" parent="MainPanel/Backdrop/WorldScroller" unique_id=217509470]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Header" type="Label" parent="MainPanel" unique_id=758019621]
+layout_mode = 0
+offset_left = 172.0
+offset_top = -27.0
+offset_right = 345.0
+offset_bottom = 6.0
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 23
+text = "Select World"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RenamingPanel" type="Panel" parent="." unique_id=587478840]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RenamingPanel" unique_id=1606521509]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = 126.0
+offset_right = 184.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 11
+
+[node name="RenameButton" type="Button" parent="RenamingPanel/VBoxContainer" unique_id=579507828]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Rename"
+
+[node name="CancelRenameButton" type="Button" parent="RenamingPanel/VBoxContainer" unique_id=519250643]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 21
+text = "Cancel"
+
+[node name="RenameHeader" type="Label" parent="RenamingPanel" unique_id=2063379110]
+layout_mode = 0
+offset_left = -86.0
+offset_top = -245.0
+offset_right = 87.0
+offset_bottom = -212.0
+theme = ExtResource("3_rp5wo")
+theme_override_font_sizes/font_size = 23
+text = "Rename World
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WorldNameEnterer" type="TextEdit" parent="RenamingPanel" unique_id=1671606887]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -237.0
+offset_top = -168.0
+offset_right = 248.0
+offset_bottom = -115.0
+theme = ExtResource("3_rp5wo")
+
+[node name="Name" type="Label" parent="RenamingPanel/WorldNameEnterer" unique_id=1454112352]
+layout_mode = 0
+offset_top = -28.0
+offset_right = 405.0
+offset_bottom = -2.0
+theme = ExtResource("3_rp5wo")
+theme_override_colors/font_color = Color(0.6156863, 0.6156863, 0.6156863, 1)
+theme_override_font_sizes/font_size = 23
+text = "World Name"
+autowrap_mode = 3
+
+[connection signal="pressed" from="MainPanel/VBoxContainer/PlayWorldButton" to="." method="_on_play_world_button_pressed"]
+[connection signal="pressed" from="MainPanel/VBoxContainer/HBoxContainer/RenameWorldButton" to="." method="_on_rename_world_button_pressed"]
+[connection signal="pressed" from="MainPanel/VBoxContainer/HBoxContainer/DeleteWorldButton" to="." method="_on_delete_world_button_pressed"]
+[connection signal="pressed" from="MainPanel/VBoxContainer2/Create New World" to="." method="_on_create_new_world_pressed"]
+[connection signal="pressed" from="MainPanel/VBoxContainer2/HBoxContainer/Re-Create" to="." method="_on_re_create_pressed"]
+[connection signal="pressed" from="MainPanel/VBoxContainer2/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="RenamingPanel/VBoxContainer/RenameButton" to="." method="_on_rename_button_pressed"]
+[connection signal="pressed" from="RenamingPanel/VBoxContainer/CancelRenameButton" to="." method="_on_cancel_rename_button_pressed"]
+[connection signal="text_changed" from="RenamingPanel/WorldNameEnterer" to="." method="_on_world_name_enterer_text_changed"]
